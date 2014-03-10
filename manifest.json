@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Facebook Secure",
+  "version": "1",
+
+  "content_scripts": [ {
+    "js": ["jquery-1.11.0.js", "openpgp.js", "content_script.js"],
+    "matches": ["<all_urls>"],
+    "run_at": "document_start",
+    "all_frames": false
+  } ],
+
+  "web_accessible_resources": [ "pub.key", "fbsecure.css" ]
+}
